@@ -12,7 +12,8 @@
   <div class="container text-center my-5">
     <h1 class="mb-4">Temporizador</h1>
     <input type="number" id="tiempoInput" class="form-control w-25 mx-auto mb-4" placeholder="Ingresa tiempo en segundos">
-    <div class="display-3 fw-bold mb-4">00:00</div>
+    <button id="ingresarTiempo" class="btn btn-primary">Ingresar tiempo</button>
+    <div class="display-3 fw-bold mb-4" id="temporizador">00:00</div>
     <div class="d-flex justify-content-center gap-3">
       <button id="iniciar" class="btn btn-success">Iniciar</button>
       <button id="pausar" class="btn btn-warning">Pausar</button>
@@ -23,6 +24,6 @@
   <footer class="mt-auto text-center py-3 bg-light">
     <p>Desarrollado por Lourdes Ferraioli</p>
   </footer>
-
+<script src="temporizador.js"></script>
 </body>
 </html>
