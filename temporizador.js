@@ -1,7 +1,6 @@
 let tiempoING = 0;
 let intervalo = null;
 
-// Función para mostrar el tiempo en formato mm:ss
 function mostrarTiempoRestante() {
   const minutos = Math.floor((tiempoING % 3600) / 60);
   const segundos = tiempoING % 60;
@@ -10,13 +9,11 @@ function mostrarTiempoRestante() {
   temporizador.textContent = `${String(minutos).padStart(2, '0')}:${String(segundos).padStart(2, '0')}`;
 }
 
-// Botón para ingresar el tiempo
 const tiempoIngresado = () => {
   tiempoING = Number(document.getElementById("tiempoInput").value);
   mostrarTiempoRestante();
 };
 
-// Botón Iniciar
 const iniciar = () => {
   if (intervalo === null && tiempoING > 0) {
     intervalo = setInterval(() => {
@@ -31,13 +28,11 @@ const iniciar = () => {
   }
 };
 
-// Botón Pausar
 const pausar = () => {
   clearInterval(intervalo);
   intervalo = null;
 };
 
-// Botón Reset
 const reset = () => {
   clearInterval(intervalo);
   intervalo = null;
@@ -45,7 +40,6 @@ const reset = () => {
   mostrarTiempoRestante();
 };
 
-// Manejadores de eventos
 const btnIngresar = document.getElementById("ingresarTiempo");
 const btnIniciar = document.getElementById("iniciar");
 const btnPausar = document.getElementById("pausar");
